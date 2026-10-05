@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FinPilot AI - Smart Personal Finance</title>
+
+    <meta
+        name="description"
+        content="FinPilot AI - Smart Personal Finance and AI Budget Coach"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+            background: #f5f7fb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .landing-container {
+            width: 100%;
+            max-width: 900px;
+            background: #ffffff;
+            border: 1px solid #e7ebf2;
+            border-radius: 24px;
+            padding: 60px 40px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+        }
+
+        .logo {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 24px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 12px 25px rgba(37, 99, 235, 0.25);
+        }
+
+        h1 {
+            font-size: 42px;
+            color: #172033;
+            margin-bottom: 12px;
+        }
+
+        .tagline {
+            font-size: 18px;
+            color: #64748b;
+            margin-bottom: 12px;
+        }
+
+        .description {
+            max-width: 620px;
+            margin: 0 auto 34px;
+            color: #94a3b8;
+            line-height: 1.7;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            min-width: 150px;
+            padding: 14px 22px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.2s ease;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: #eff6ff;
+            color: #2563eb;
+            border: 1px solid #dbeafe;
+        }
+
+        .btn-secondary:hover {
+            background: #dbeafe;
+            transform: translateY(-1px);
+        }
+
+        .features {
+            margin-top: 45px;
+            padding-top: 30px;
+            border-top: 1px solid #e7ebf2;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .feature {
+            padding: 20px;
+        }
+
+        .feature i {
+            font-size: 24px;
+            color: #2563eb;
+            margin-bottom: 12px;
+        }
+
+        .feature h3 {
+            color: #172033;
+            font-size: 16px;
+            margin-bottom: 7px;
+        }
+
+        .feature p {
+            color: #94a3b8;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 700px) {
+            .landing-container {
+                padding: 40px 22px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="landing-container">
+
+        <div class="logo">
+            <i class="fa-solid fa-chart-line"></i>
+        </div>
+
+        <h1>FinPilot AI</h1>
+
+        <p class="tagline">
+            Smart Personal Finance & AI Budget Coach
+        </p>
+
+        <p class="description">
+            Track your income and expenses, manage budgets, monitor savings
+            goals, generate financial reports, and get personalized financial
+            insights with FinPilot AI.
+        </p>
+
+        <div class="actions">
+
+            <a href="pages/login.html" class="btn btn-primary">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                Login
+            </a>
+
+            <a href="pages/register.html" class="btn btn-secondary">
+                <i class="fa-solid fa-user-plus"></i>
+                Create Account
+            </a>
+
+        </div>
+
+        <section class="features">
+
+            <div class="feature">
+                <i class="fa-solid fa-wallet"></i>
+                <h3>Smart Finance</h3>
+                <p>
+                    Manage income, expenses, budgets and savings in one place.
+                </p>
+            </div>
+
+            <div class="feature">
+                <i class="fa-solid fa-robot"></i>
+                <h3>AI Coach</h3>
+                <p>
+                    Get personalized financial insights based on your data.
+                </p>
+            </div>
+
+            <div class="feature">
+                <i class="fa-solid fa-chart-pie"></i>
+                <h3>Financial Reports</h3>
+                <p>
+                    Understand your financial activity through reports and
+                    visualizations.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

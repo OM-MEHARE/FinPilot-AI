@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Budget | FinPilot AI</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="../css/budget.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-brand">
+
+            <div class="brand-logo">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+
+            <div class="brand-text">
+
+                <h1>FinPilot AI</h1>
+
+                <span>Smart Finance</span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-navigation">
+
+            <div class="menu-label">
+                MAIN MENU
+            </div>
+
+            <a href="dashboard.html"
+               class="nav-item">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <a href="income.html"
+               class="nav-item">
+
+                <i class="fa-solid fa-wallet"></i>
+
+                <span>Income</span>
+
+            </a>
+
+
+            <a href="expense.html"
+               class="nav-item">
+
+                <i class="fa-solid fa-receipt"></i>
+
+                <span>Expenses</span>
+
+            </a>
+
+
+            <a href="budget.html"
+               class="nav-item active">
+
+                <i class="fa-solid fa-chart-pie"></i>
+
+                <span>Budget</span>
+
+            </a>
+
+
+            <a href="goals.html"
+               class="nav-item">
+
+                <i class="fa-solid fa-bullseye"></i>
+
+                <span>Goals</span>
+
+            </a>
+
+
+            <div class="menu-label tools-label">
+                TOOLS
+            </div>
+
+
+            <a href="ai-coach.html"
+               class="nav-item ai-nav-item">
+
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                <span>AI Coach</span>
+
+                <span class="new-badge">
+                    AI
+                </span>
+
+            </a>
+
+
+            <a href="reports.html"
+               class="nav-item">
+
+                <i class="fa-solid fa-file-lines"></i>
+
+                <span>Reports</span>
+
+            </a>
+
+
+            <a href="settings.html"
+               class="nav-item">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>Settings</span>
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-help">
+
+                <div class="help-icon">
+
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                </div>
+
+                <div class="help-content">
+
+                    <strong>
+                        Smart money starts here
+                    </strong>
+
+                    <p>
+                        Let FinPilot AI help you understand and improve your finances.
+                    </p>
+
+                    <a href="ai-coach.html">
+                        Explore AI Coach
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="logout-button"
+                id="logoutBtn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Logout</span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+        <!-- TOP HEADER -->
+
+        <header class="top-header">
+
+            <div class="header-spacer"></div>
+
+            <div class="header-right">
+
+                <button class="notification-button">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <div class="header-profile">
+
+                    <div class="profile-avatar">
+                        OM
+                    </div>
+
+                    <div class="profile-details">
+
+                        <strong id="profileName">
+                            Welcome
+                        </strong>
+
+                        <span>
+                            Personal Account
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down profile-chevron"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- PAGE CONTENT -->
+
+        <div class="page-content">
+
+            <!-- PAGE HEADING -->
+
+            <div class="page-heading">
+
+                <div>
+
+                    <span class="page-eyebrow">
+                        BUDGET MANAGEMENT
+                    </span>
+
+                    <h1>
+                        Manage Your Budget
+                    </h1>
+
+                    <p>
+                        Set spending limits and keep your expenses under control.
+                    </p>
+
+                </div>
+
+
+                <div class="month-display">
+
+                    <i class="fa-regular fa-calendar"></i>
+
+                    <span id="currentMonth">
+                        Current Month
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- FORM CARD -->
+
+            <section class="budget-form-card">
+
+                <div class="section-header">
+
+                    <div class="section-title-area">
+
+                        <div class="section-icon blue-icon">
+
+                            <i class="fa-solid fa-chart-pie"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Set Your Budget
+                            </h2>
+
+                            <p>
+                                Define a spending limit for a category.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <form id="budgetForm"
+                      class="budget-form">
+
+                    <div class="form-group">
+
+                        <label for="budgetCategory">
+                            Budget Category
+                        </label>
+
+                        <div class="select-wrapper">
+
+                            <i class="fa-solid fa-tags"></i>
+
+                            <select
+                                id="budgetCategory"
+                                required>
+
+                                <option value="">
+                                    Select Category
+                                </option>
+
+                                <option value="Food">
+                                    Food
+                                </option>
+
+                                <option value="Rent">
+                                    Rent
+                                </option>
+
+                                <option value="Shopping">
+                                    Shopping
+                                </option>
+
+                                <option value="Transport">
+                                    Transport
+                                </option>
+
+                                <option value="Entertainment">
+                                    Entertainment
+                                </option>
+
+                                <option value="Bills">
+                                    Bills
+                                </option>
+
+                                <option value="Healthcare">
+                                    Healthcare
+                                </option>
+
+                                <option value="Education">
+                                    Education
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="budgetAmount">
+                            Budget Limit
+                        </label>
+
+                        <div class="amount-wrapper">
+
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                            <input
+                                type="number"
+                                id="budgetAmount"
+                                placeholder="Enter budget amount"
+                                min="1"
+                                step="0.01"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="primary-button">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        <span>
+                            Add Budget
+                        </span>
+
+                    </button>
+
+                </form>
+
+
+                <p
+                    id="budgetMessage"
+                    class="budget-message">
+                </p>
+
+            </section>
+
+
+            <!-- BUDGETS -->
+
+            <section class="budgets-section">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <span class="section-eyebrow">
+                            YOUR FINANCES
+                        </span>
+
+                        <h2>
+                            Your Budgets
+                        </h2>
+
+                        <p>
+                            Monitor your spending limits and budget usage.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="budgetsContainer"
+                    class="budgets-container">
+
+                    <div class="loading-state">
+
+                        <i class="fa-solid fa-spinner fa-spin"></i>
+
+                        <p>
+                            Loading budgets...
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- FOOTER -->
+
+            <footer class="page-footer">
+
+                <p>
+                    © 2026 FinPilot AI. Smart decisions. Better finances.
+                </p>
+
+                <div>
+
+                    <span>
+                        Personal Finance Dashboard
+                    </span>
+
+                </div>
+
+            </footer>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script src="../js/budget.js"></script>
+
+</body>
+
+</html>

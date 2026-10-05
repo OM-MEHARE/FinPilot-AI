@@ -1,0 +1,1252 @@
+/* =====================================================
+   FinPilot AI
+   Global Styles
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#F8FAFC;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    color:#1E293B;
+}
+
+/* =========================
+   Login Container
+========================= */
+
+.login-container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+/* =========================
+   Login Card
+========================= */
+
+.login-card{
+
+    width:420px;
+
+    background:#ffffff;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.08);
+
+}
+
+/* =========================
+   Logo
+========================= */
+
+.logo-section{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+}
+
+.logo-section h1{
+
+    color:#2563EB;
+
+    font-size:34px;
+
+    font-weight:700;
+
+}
+
+.logo-section p{
+
+    color:#64748B;
+
+    margin-top:8px;
+
+    font-size:14px;
+
+}
+
+/* =========================
+   Welcome
+========================= */
+
+.welcome-section{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+.welcome-section h2{
+
+    font-size:26px;
+
+    margin-bottom:8px;
+
+}
+
+.welcome-section p{
+
+    color:#64748B;
+
+}
+
+/* =========================
+   Form
+========================= */
+
+.input-group{
+
+    margin-bottom:22px;
+
+}
+
+.input-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-size:14px;
+
+    font-weight:500;
+
+}
+
+.input-box{
+
+    display:flex;
+
+    align-items:center;
+
+    background:#F1F5F9;
+
+    border-radius:12px;
+
+    padding:0 15px;
+
+    height:55px;
+
+}
+
+.input-box i{
+
+    color:#94A3B8;
+
+    font-size:16px;
+
+}
+
+.input-box input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    padding:0 12px;
+
+    font-size:15px;
+
+}
+
+.toggle-password{
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    color:#94A3B8;
+
+    font-size:16px;
+
+}
+
+/* =========================
+   Options
+========================= */
+
+.options{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:28px;
+
+    font-size:14px;
+
+}
+
+.remember{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+.options a{
+
+    text-decoration:none;
+
+    color:#2563EB;
+
+}
+
+/* =========================
+   Login Button
+========================= */
+
+.login-btn{
+
+    width:100%;
+
+    border:none;
+
+    background:#2563EB;
+
+    color:white;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.login-btn:hover{
+
+    background:#1D4ED8;
+
+}
+
+/* =========================
+   Register Link
+========================= */
+
+.register-link{
+
+    text-align:center;
+
+    margin-top:25px;
+
+}
+
+.register-link a{
+
+    color:#2563EB;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media(max-width:500px){
+
+.login-card{
+
+    width:100%;
+
+    padding:30px;
+
+}
+
+}
+/* ==========================
+   Register Page
+========================== */
+
+.options{
+    align-items:flex-start;
+}
+
+.remember{
+    font-size:14px;
+    line-height:1.5;
+}
+
+/* ==========================================
+   Income Records
+   ========================================== */
+
+.income-records-section {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.income-records-header {
+    margin-bottom: 18px;
+}
+
+.income-records-header h2 {
+    margin: 0 0 6px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.income-records-header p {
+    margin: 0;
+    font-size: 13px;
+    color: #777;
+}
+
+.income-message {
+    margin: 10px 0;
+    font-size: 13px;
+    color: #555;
+}
+
+#incomeList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.income-record {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 16px;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 14px;
+}
+
+.income-record-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.income-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: #eaf8f0;
+    color: #16a34a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.income-record-info h3 {
+    margin: 0 0 4px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.income-record-info p {
+    margin: 0;
+    font-size: 12px;
+    color: #888;
+}
+
+.income-record-right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.income-record-right strong {
+    font-size: 15px;
+    color: #16a34a;
+    white-space: nowrap;
+}
+
+.income-actions {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.edit-income-btn,
+.delete-income-btn {
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.edit-income-btn {
+    background: #eef4ff;
+    color: #2563eb;
+}
+
+.edit-income-btn:hover {
+    background: #2563eb;
+    color: white;
+    transform: scale(1.05);
+}
+
+.delete-income-btn {
+    background: #fff0f3;
+    color: #ef476f;
+}
+
+.delete-income-btn:hover {
+    background: #ef476f;
+    color: white;
+    transform: scale(1.05);
+}
+
+.empty-income {
+    padding: 25px;
+    text-align: center;
+    color: #888;
+}
+
+.empty-income i {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 600px) {
+
+    .income-record {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .income-record-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+}
+/* ==========================================
+   Expense Records
+   ========================================== */
+
+.expense-records-section {
+    margin-top: 30px;
+    width: 100%;
+}
+
+
+.expense-records-header {
+    margin-bottom: 18px;
+}
+
+
+.expense-records-header h2 {
+    margin: 0 0 6px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+
+.expense-records-header p {
+    margin: 0;
+    font-size: 13px;
+    color: #777;
+}
+
+
+.expense-message {
+    margin: 10px 0;
+    font-size: 13px;
+    color: #555;
+}
+
+
+#expenseList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+.expense-record {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 16px;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 14px;
+}
+
+
+.expense-record-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    min-width: 0;
+}
+
+
+.expense-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: #fff0f3;
+    color: #ef476f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+
+.expense-record-info h3 {
+    margin: 0 0 4px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+.expense-record-info p {
+    margin: 0;
+    font-size: 12px;
+    color: #888;
+}
+
+
+.expense-record-info small {
+    display: block;
+    margin-top: 5px;
+    font-size: 11px;
+    color: #999;
+}
+
+
+.expense-record-right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+
+.expense-record-right strong {
+    font-size: 15px;
+    color: #ef476f;
+    white-space: nowrap;
+}
+
+
+.expense-actions {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+
+.edit-expense-btn,
+.delete-expense-btn {
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+
+.edit-expense-btn {
+    background: #eef4ff;
+    color: #2563eb;
+}
+
+
+.edit-expense-btn:hover {
+    background: #2563eb;
+    color: white;
+    transform: scale(1.05);
+}
+
+
+.delete-expense-btn {
+    background: #fff0f3;
+    color: #ef476f;
+}
+
+
+.delete-expense-btn:hover {
+    background: #ef476f;
+    color: white;
+    transform: scale(1.05);
+}
+
+
+.empty-expense {
+    padding: 25px;
+    text-align: center;
+    color: #888;
+}
+
+
+.empty-expense i {
+    display: block;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+
+@media (max-width: 600px) {
+
+    .expense-record {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+    }
+
+
+    .expense-record-right {
+
+        width: 100%;
+
+        justify-content: space-between;
+
+    }
+
+}
+
+/* ==========================================
+   Budget Card Actions
+   ========================================== */
+
+.budget-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.edit-budget-btn,
+.delete-budget-btn {
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+
+.edit-budget-btn {
+    background: #eef4ff;
+    color: #2563eb;
+}
+
+
+.edit-budget-btn:hover {
+    background: #2563eb;
+    color: white;
+    transform: scale(1.05);
+}
+
+
+.delete-budget-btn {
+    background: #fff0f3;
+    color: #ef476f;
+}
+
+
+.delete-budget-btn:hover {
+    background: #ef476f;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* ==========================================
+   Income Page UI Polish
+========================================== */
+
+.income-page-header {
+    margin-bottom: 24px;
+}
+
+.income-page-header h1 {
+    margin: 0 0 6px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.income-page-header p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.income-form-section,
+.income-records-section {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.income-form-section h2,
+.income-records-section h2 {
+    margin: 0 0 20px;
+    font-size: 20px;
+    color: #111827;
+}
+
+.income-form-section input,
+.income-form-section select {
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.income-form-section input:focus,
+.income-form-section select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+    outline: none;
+}
+
+.income-records-section {
+    overflow-x: auto;
+}
+
+.income-records-section table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.income-records-section th {
+    padding: 13px 14px;
+    background: #f9fafb;
+    color: #4b5563;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.income-records-section td {
+    padding: 14px;
+    color: #374151;
+    font-size: 14px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.income-records-section tr:hover td {
+    background: #fafafa;
+}
+
+.income-records-section button {
+    transition: transform 0.2s ease,
+                opacity 0.2s ease;
+}
+
+.income-records-section button:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+}
+
+@media (max-width: 700px) {
+
+    .income-form-section,
+    .income-records-section {
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+    .income-page-header h1 {
+        font-size: 23px;
+    }
+
+    .income-records-section {
+        overflow-x: auto;
+    }
+
+}
+
+/* ==========================================
+   Expense Page UI Polish
+========================================== */
+
+.expense-page-header {
+    margin-bottom: 24px;
+}
+
+.expense-page-header h1 {
+    margin: 0 0 6px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.expense-page-header p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.expense-form-section,
+.expense-records-section {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.expense-form-section h2,
+.expense-records-section h2 {
+    margin: 0 0 20px;
+    font-size: 20px;
+    color: #111827;
+}
+
+.expense-form-section input,
+.expense-form-section select,
+.expense-form-section textarea {
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.expense-form-section input:focus,
+.expense-form-section select:focus,
+.expense-form-section textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+    outline: none;
+}
+
+.expense-records-section {
+    overflow-x: auto;
+}
+
+.expense-records-section table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.expense-records-section th {
+    padding: 13px 14px;
+    background: #f9fafb;
+    color: #4b5563;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.expense-records-section td {
+    padding: 14px;
+    color: #374151;
+    font-size: 14px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.expense-records-section tr:hover td {
+    background: #fafafa;
+}
+
+.expense-records-section button {
+    transition: transform 0.2s ease,
+                opacity 0.2s ease;
+}
+
+.expense-records-section button:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+}
+
+@media (max-width: 700px) {
+
+    .expense-form-section,
+    .expense-records-section {
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+    .expense-page-header h1 {
+        font-size: 23px;
+    }
+
+    .expense-records-section {
+        overflow-x: auto;
+    }
+
+}
+
+/* ==========================================
+   Goals Page UI Polish
+========================================== */
+
+.goals-page-header {
+    margin-bottom: 24px;
+}
+
+.goals-page-header h1 {
+    margin: 0 0 6px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.goals-page-header p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.goals-form-section,
+.goals-list-section {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.goals-form-section h2,
+.goals-list-section h2 {
+    margin: 0 0 20px;
+    font-size: 20px;
+    color: #111827;
+}
+
+.goals-form-section input,
+.goals-form-section select {
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.goals-form-section input:focus,
+.goals-form-section select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+    outline: none;
+}
+
+.goal-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 20px;
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.goal-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+}
+
+.goal-card h3 {
+    margin-top: 0;
+    color: #111827;
+}
+
+.goal-progress {
+    margin-top: 14px;
+}
+
+.goal-progress-bar {
+    overflow: hidden;
+    border-radius: 999px;
+}
+
+@media (max-width: 700px) {
+
+    .goals-form-section,
+    .goals-list-section {
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+    .goals-page-header h1 {
+        font-size: 23px;
+    }
+
+}
+
+/* ==========================================
+   FinPilot AI Application Sidebar
+========================================== */
+
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    background: #f5f7fb;
+}
+
+.app-sidebar {
+    width: 250px;
+    min-width: 250px;
+    min-height: 100vh;
+    background: #111827;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.08);
+}
+
+.app-sidebar-logo {
+    padding: 28px 24px 22px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.app-sidebar-logo h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.app-sidebar-logo p {
+    margin: 6px 0 0;
+    font-size: 11px;
+    line-height: 1.5;
+    color: #9ca3af;
+}
+
+.app-sidebar-menu {
+    list-style: none;
+    padding: 20px 14px;
+    margin: 0;
+    flex: 1;
+}
+
+.app-sidebar-menu li {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 13px 15px;
+    margin-bottom: 6px;
+    border-radius: 10px;
+    color: #cbd5e1;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.app-sidebar-menu li i {
+    width: 20px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.app-sidebar-menu li:hover {
+    background: #1f2937;
+    color: #ffffff;
+}
+
+.app-sidebar-menu li.active {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.app-sidebar-menu li.logout-item {
+    margin-top: 18px;
+    color: #fca5a5;
+}
+
+.app-sidebar-menu li.logout-item:hover {
+    background: #3f1d1d;
+    color: #fecaca;
+}
+
+.app-page-content {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    min-height: 100vh;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.app-page-card {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 35px;
+    box-sizing: border-box;
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+}
+
+.app-page-header {
+    margin-bottom: 30px;
+}
+
+.app-page-header h2 {
+    margin: 0 0 8px;
+    color: #111827;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.app-page-header p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.app-page-logo {
+    margin-bottom: 25px;
+}
+
+.app-page-logo h1 {
+    margin: 0;
+    color: #2563eb;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.app-page-logo p {
+    margin: 4px 0 0;
+    color: #6b7280;
+    font-size: 12px;
+}
+
+.app-back-link {
+    margin-top: 25px;
+    text-align: left;
+}
+
+.app-back-link a {
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.app-back-link a:hover {
+    text-decoration: underline;
+}
+
+/* Keep income and expense forms comfortable inside the app layout */
+
+.app-page-card .login-btn {
+    margin-top: 10px;
+}
+
+.app-page-card .income-records-section,
+.app-page-card .expense-records-section {
+    margin-top: 35px;
+}
+
+/* ==========================================
+   Responsive Sidebar
+========================================== */
+
+@media (max-width: 900px) {
+
+    .app-sidebar {
+        width: 210px;
+        min-width: 210px;
+    }
+
+    .app-page-content {
+        margin-left: 210px;
+        width: calc(100% - 210px);
+        padding: 25px;
+    }
+
+    .app-sidebar-logo {
+        padding: 22px 18px;
+    }
+
+    .app-sidebar-menu {
+        padding: 15px 10px;
+    }
+
+    .app-sidebar-menu li {
+        padding: 11px 12px;
+        font-size: 13px;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .app-sidebar {
+        position: relative;
+        width: 100%;
+        min-width: 100%;
+        min-height: auto;
+    }
+
+    .app-layout {
+        display: block;
+    }
+
+    .app-page-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .app-sidebar-menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+    }
+
+    .app-sidebar-menu li {
+        margin-bottom: 0;
+    }
+
+}
+

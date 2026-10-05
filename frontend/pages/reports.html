@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>FinPilot AI - Reports</title>
+
+    <!-- Google Font -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Reports CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/reports.css"
+    >
+
+    <!-- PDF Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+
+</head>
+
+
+<body>
+
+<div class="dashboard-layout">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+        <!-- Brand -->
+
+        <div class="sidebar-brand">
+
+            <div class="brand-logo">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+            </div>
+
+            <div>
+
+                <div class="brand-name">
+                    FinPilot AI
+                </div>
+
+                <div class="brand-subtitle">
+                    Smart Finance
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav class="sidebar-navigation">
+
+            <div class="nav-section-label">
+                MAIN MENU
+            </div>
+
+
+            <a
+                class="nav-item"
+                href="dashboard.html"
+            >
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <a
+                class="nav-item"
+                href="income.html"
+            >
+
+                <i class="fa-solid fa-wallet"></i>
+
+                <span>Income</span>
+
+            </a>
+
+
+            <a
+                class="nav-item"
+                href="expense.html"
+            >
+
+                <i class="fa-solid fa-receipt"></i>
+
+                <span>Expenses</span>
+
+            </a>
+
+
+            <a
+                class="nav-item"
+                href="budget.html"
+            >
+
+                <i class="fa-solid fa-chart-pie"></i>
+
+                <span>Budget</span>
+
+            </a>
+
+
+            <a
+                class="nav-item"
+                href="goals.html"
+            >
+
+                <i class="fa-solid fa-bullseye"></i>
+
+                <span>Goals</span>
+
+            </a>
+
+
+            <div class="nav-section-label tools-label">
+                TOOLS
+            </div>
+
+
+            <a
+                class="nav-item"
+                href="ai-coach.html"
+            >
+
+                <i class="fa-solid fa-robot"></i>
+
+                <span>AI Coach</span>
+
+                <span class="new-badge">
+                    AI
+                </span>
+
+            </a>
+
+
+            <a
+                class="nav-item active"
+                href="reports.html"
+            >
+
+                <i class="fa-solid fa-file-lines"></i>
+
+                <span>Reports</span>
+
+            </a>
+
+
+            <a
+                class="nav-item"
+                href="settings.html"
+            >
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>Settings</span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- Sidebar Bottom -->
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-help">
+
+                <div class="help-icon">
+
+                    <i class="fa-solid fa-sparkles"></i>
+
+                </div>
+
+                <strong>
+                    Smart money starts here
+                </strong>
+
+                <p>
+                    Let FinPilot AI help you understand
+                    and improve your finances.
+                </p>
+
+                <a
+                    href="ai-coach.html"
+                    class="help-button"
+                >
+                    Explore AI Coach
+                </a>
+
+            </div>
+
+
+            <button
+                class="nav-item logout-item"
+                id="logoutBtn"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Logout</span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- Top Header -->
+
+        <header class="top-header">
+
+            <div class="header-spacer"></div>
+
+
+            <div class="header-right">
+
+                <button
+                    class="notification-button"
+                    aria-label="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <div class="header-profile">
+
+                    <div
+                        class="profile-avatar"
+                        id="profileAvatar"
+                    >
+                        OM
+                    </div>
+
+
+                    <div class="profile-info">
+
+                        <strong id="profileName">
+                            Welcome
+                        </strong>
+
+                        <span>
+                            Personal Account
+                        </span>
+
+                    </div>
+
+
+                    <i class="fa-solid fa-chevron-down profile-chevron"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             PAGE CONTENT
+        ================================================== -->
+
+        <div class="page-content">
+
+
+            <!-- Page Heading -->
+
+            <section class="page-heading">
+
+                <div>
+
+                    <div class="page-eyebrow">
+                        FINANCIAL REPORTS
+                    </div>
+
+                    <h1>
+                        Your Financial Reports 📊
+                    </h1>
+
+                    <p>
+                        Review your financial activity,
+                        spending patterns, budgets, and savings progress.
+                    </p>
+
+                </div>
+
+
+                <div class="page-actions">
+
+                    <div class="page-date">
+
+                        <i class="fa-regular fa-calendar"></i>
+
+                        <span id="currentMonth">
+                            September 2026
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        id="downloadPdfBtn"
+                        class="download-pdf-btn"
+                        onclick="downloadPDFReport()"
+                    >
+
+                        <i class="fa-solid fa-file-pdf"></i>
+
+                        <span>
+                            Download PDF
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 SUMMARY CARDS
+            ================================================== -->
+
+            <section class="summary-grid">
+
+
+                <div class="summary-card income-card">
+
+                    <div class="summary-card-top">
+
+                        <div class="summary-icon">
+
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+
+                        </div>
+
+                        <span class="summary-label">
+                            Total Income
+                        </span>
+
+                    </div>
+
+
+                    <h2 id="reportIncome">
+                        ₹0
+                    </h2>
+
+                    <p>
+                        Total recorded income
+                    </p>
+
+                </div>
+
+
+
+                <div class="summary-card expense-card">
+
+                    <div class="summary-card-top">
+
+                        <div class="summary-icon">
+
+                            <i class="fa-solid fa-arrow-trend-down"></i>
+
+                        </div>
+
+                        <span class="summary-label">
+                            Total Expenses
+                        </span>
+
+                    </div>
+
+
+                    <h2 id="reportExpenses">
+                        ₹0
+                    </h2>
+
+                    <p>
+                        Total recorded spending
+                    </p>
+
+                </div>
+
+
+
+                <div class="summary-card balance-card">
+
+                    <div class="summary-card-top">
+
+                        <div class="summary-icon">
+
+                            <i class="fa-solid fa-wallet"></i>
+
+                        </div>
+
+                        <span class="summary-label">
+                            Current Balance
+                        </span>
+
+                    </div>
+
+
+                    <h2 id="reportBalance">
+                        ₹0
+                    </h2>
+
+                    <p>
+                        Income after expenses
+                    </p>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 REPORT GRID
+            ================================================== -->
+
+            <section class="reports-grid">
+
+
+                <!-- Expense Categories -->
+
+                <div class="report-section">
+
+                    <div class="section-header">
+
+                        <div>
+
+                            <span class="section-eyebrow">
+                                SPENDING
+                            </span>
+
+                            <h2>
+                                Expense Categories
+                            </h2>
+
+                        </div>
+
+
+                        <div class="section-icon blue-icon">
+
+                            <i class="fa-solid fa-chart-pie"></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="report-list"
+                        id="reportCategories"
+                    >
+
+                        <p class="report-empty">
+                            Loading expense categories...
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Monthly Spending -->
+
+                <div class="report-section">
+
+                    <div class="section-header">
+
+                        <div>
+
+                            <span class="section-eyebrow">
+                                TREND
+                            </span>
+
+                            <h2>
+                                Monthly Spending
+                            </h2>
+
+                        </div>
+
+
+                        <div class="section-icon purple-icon">
+
+                            <i class="fa-solid fa-calendar-days"></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="report-list"
+                        id="reportMonthly"
+                    >
+
+                        <p class="report-empty">
+                            Loading monthly spending...
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 SAVINGS GOALS
+            ================================================== -->
+
+            <section class="report-section full-width-section">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <span class="section-eyebrow">
+                            PROGRESS
+                        </span>
+
+                        <h2>
+                            Savings Goals
+                        </h2>
+
+                    </div>
+
+
+                    <div class="section-icon green-icon">
+
+                        <i class="fa-solid fa-bullseye"></i>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="goals-report-grid"
+                    id="reportGoals"
+                >
+
+                    <p class="report-empty">
+                        Loading savings goals...
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 REPORT INFORMATION
+            ================================================== -->
+
+            <section class="report-info-card">
+
+                <div class="report-info-icon">
+
+                    <i class="fa-solid fa-file-circle-check"></i>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Complete Financial Report
+                    </h3>
+
+                    <p>
+                        Download a PDF containing your financial
+                        summary, expense categories, monthly spending,
+                        budget status, and savings goals.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="secondary-pdf-btn"
+                    onclick="downloadPDFReport()"
+                >
+
+                    <i class="fa-solid fa-download"></i>
+
+                    Download Report
+
+                </button>
+
+            </section>
+
+
+
+            <!-- Footer -->
+
+            <footer class="dashboard-footer">
+
+                <span>
+                    © 2026 FinPilot AI
+                </span>
+
+                <span>
+                    Smart Personal Finance & AI Budget Coach
+                </span>
+
+            </footer>
+
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- Reports JavaScript -->
+
+<script src="../js/reports.js"></script>
+
+</body>
+
+</html>

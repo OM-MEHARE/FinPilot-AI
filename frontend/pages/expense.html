@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Expenses | FinPilot AI</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Expense Page CSS -->
+    <link rel="stylesheet"
+          href="../css/expense.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+    <!-- ==========================================
+         SIDEBAR
+    =========================================== -->
+
+    <aside class="sidebar">
+
+        <!-- Brand -->
+
+        <div class="sidebar-brand">
+
+            <div class="brand-logo">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+
+            <div class="brand-text">
+
+                <h2>FinPilot AI</h2>
+
+                <span>Smart Finance</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav class="sidebar-navigation">
+
+            <div class="menu-label">
+                MAIN MENU
+            </div>
+
+
+            <a href="dashboard.html"
+               class="nav-item">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <a href="income.html"
+               class="nav-item">
+
+                <i class="fa-solid fa-wallet"></i>
+
+                <span>Income</span>
+
+            </a>
+
+
+            <a href="expense.html"
+               class="nav-item active">
+
+                <i class="fa-solid fa-credit-card"></i>
+
+                <span>Expenses</span>
+
+            </a>
+
+
+            <a href="budget.html"
+               class="nav-item">
+
+                <i class="fa-solid fa-chart-pie"></i>
+
+                <span>Budget</span>
+
+            </a>
+
+
+            <a href="goals.html"
+               class="nav-item">
+
+                <i class="fa-solid fa-bullseye"></i>
+
+                <span>Goals</span>
+
+            </a>
+
+
+            <div class="menu-label tools-label">
+                TOOLS
+            </div>
+
+
+            <a href="ai-coach.html"
+               class="nav-item">
+
+                <i class="fa-solid fa-robot"></i>
+
+                <span>AI Coach</span>
+
+                <span class="new-badge">AI</span>
+
+            </a>
+
+
+            <a href="reports.html"
+               class="nav-item">
+
+                <i class="fa-solid fa-file-lines"></i>
+
+                <span>Reports</span>
+
+            </a>
+
+
+            <a href="settings.html"
+               class="nav-item">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>Settings</span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- Sidebar Help -->
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-help">
+
+                <div class="help-icon">
+                    <i class="fa-solid fa-sparkles"></i>
+                </div>
+
+                <h4>Smart money starts here</h4>
+
+                <p>
+                    Let FinPilot AI help you understand
+                    and improve your finances.
+                </p>
+
+                <a href="ai-coach.html">
+                    Explore AI Coach
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <!-- Logout -->
+
+            <button class="logout-button"
+                    onclick="logoutUser()">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Logout</span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ==========================================
+         MAIN AREA
+    =========================================== -->
+
+    <main class="main-content">
+
+
+        <!-- ==========================================
+             TOP HEADER
+        =========================================== -->
+
+        <header class="top-header">
+
+            <div class="header-spacer"></div>
+
+
+            <div class="header-right">
+
+                <button class="notification-button"
+                        title="Notifications">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <div class="header-profile">
+
+                    <div class="profile-avatar">
+                        OM
+                    </div>
+
+                    <div class="profile-details">
+
+                        <strong id="profileName">
+                            Personal Account
+                        </strong>
+
+                        <span>
+                            Personal Account
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down profile-chevron"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ==========================================
+             PAGE CONTENT
+        =========================================== -->
+
+        <div class="page-content">
+
+
+            <!-- Page Heading -->
+
+            <section class="page-heading">
+
+                <div>
+
+                    <div class="page-eyebrow">
+                        EXPENSE MANAGEMENT
+                    </div>
+
+                    <h1>
+                        Manage Your Expenses
+                        <span>💸</span>
+                    </h1>
+
+                    <p>
+                        Record, edit, and track your spending in one place.
+                    </p>
+
+                </div>
+
+                <div class="page-date">
+
+                    <i class="fa-regular fa-calendar"></i>
+
+                    <span id="currentMonth">
+                        September 2026
+                    </span>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==========================================
+                 FORM + SUMMARY AREA
+            =========================================== -->
+
+            <section class="expense-top-grid">
+
+
+                <!-- Add Expense -->
+
+                <div class="content-card expense-form-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <span class="card-eyebrow">
+                                TRANSACTION
+                            </span>
+
+                            <h2>
+                                Add Expense
+                            </h2>
+
+                            <p>
+                                Add a new expense to your financial records.
+                            </p>
+
+                        </div>
+
+                        <div class="card-icon expense-card-icon">
+
+                            <i class="fa-solid fa-receipt"></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Expense Form -->
+
+                    <form id="expenseForm"
+                          class="expense-form">
+
+
+                        <!-- Category -->
+
+                        <div class="form-field">
+
+                            <label for="category">
+                                Expense Category
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <i class="fa-solid fa-tags"></i>
+
+                                <input
+                                    type="text"
+                                    id="category"
+                                    placeholder="e.g. Food, Rent, Shopping"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Amount -->
+
+                        <div class="form-field">
+
+                            <label for="amount">
+                                Amount (₹)
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                                <input
+                                    type="number"
+                                    id="amount"
+                                    placeholder="Enter amount"
+                                    min="1"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Date -->
+
+                        <div class="form-field">
+
+                            <label for="date">
+                                Date
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <i class="fa-regular fa-calendar"></i>
+
+                                <input
+                                    type="date"
+                                    id="date"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Notes -->
+
+                        <div class="form-field full-width">
+
+                            <label for="notes">
+                                Notes
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <i class="fa-regular fa-note-sticky"></i>
+
+                                <input
+                                    type="text"
+                                    id="notes"
+                                    placeholder="Optional notes">
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Message -->
+
+                        <p id="expenseMessage"
+                           class="expense-message">
+                        </p>
+
+
+                        <!-- Submit -->
+
+                        <div class="form-actions">
+
+                            <button
+                                type="submit"
+                                class="primary-button">
+
+                                <i class="fa-solid fa-plus"></i>
+
+                                <span>Add Expense</span>
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+
+                <!-- Quick Info -->
+
+                <div class="content-card expense-info-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <span class="card-eyebrow">
+                                SMART FINANCE
+                            </span>
+
+                            <h2>
+                                Track Every Rupee
+                            </h2>
+
+                            <p>
+                                Keep your spending organized to make
+                                better financial decisions.
+                            </p>
+
+                        </div>
+
+                        <div class="card-icon info-card-icon">
+
+                            <i class="fa-solid fa-chart-pie"></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="expense-tips">
+
+                        <div class="tip-item">
+
+                            <div class="tip-icon blue">
+                                <i class="fa-solid fa-layer-group"></i>
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Categorize spending
+                                </strong>
+
+                                <span>
+                                    Use clear categories like Food,
+                                    Shopping, Rent, and Travel.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="tip-item">
+
+                            <div class="tip-icon orange">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Watch your spending
+                                </strong>
+
+                                <span>
+                                    Your expenses appear on the
+                                    dashboard automatically.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="tip-item">
+
+                            <div class="tip-icon green">
+                                <i class="fa-solid fa-robot"></i>
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Get AI insights
+                                </strong>
+
+                                <span>
+                                    FinPilot AI can analyze your
+                                    spending patterns.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==========================================
+                 EXPENSE RECORDS
+            =========================================== -->
+
+            <section class="content-card records-card">
+
+                <div class="records-header">
+
+                    <div>
+
+                        <span class="card-eyebrow">
+                            TRANSACTION HISTORY
+                        </span>
+
+                        <h2>
+                            Expense Records
+                        </h2>
+
+                        <p>
+                            View, edit, or delete your expense records.
+                        </p>
+
+                    </div>
+
+                    <div class="records-badge">
+
+                        <i class="fa-solid fa-receipt"></i>
+
+                        <span>
+                            Your Expenses
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Expense List -->
+
+                <div id="expenseList"
+                     class="expense-list">
+
+                    <div class="loading-state">
+
+                        <i class="fa-solid fa-spinner fa-spin"></i>
+
+                        <p>
+                            Loading expense records...
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==========================================
+                 QUICK ACTIONS
+            =========================================== -->
+
+            <section class="quick-access">
+
+                <div class="section-heading">
+
+                    <span>
+                        QUICK ACCESS
+                    </span>
+
+                    <h2>
+                        Quick Actions
+                    </h2>
+
+                </div>
+
+
+                <div class="quick-actions-grid">
+
+
+                    <a href="income.html"
+                       class="quick-action-card">
+
+                        <div class="quick-action-icon blue">
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Add Income
+                            </strong>
+
+                            <span>
+                                Record new income
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right action-arrow"></i>
+
+                    </a>
+
+
+                    <a href="budget.html"
+                       class="quick-action-card">
+
+                        <div class="quick-action-icon purple">
+
+                            <i class="fa-solid fa-chart-pie"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Create Budget
+                            </strong>
+
+                            <span>
+                                Plan your spending
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right action-arrow"></i>
+
+                    </a>
+
+
+                    <a href="goals.html"
+                       class="quick-action-card">
+
+                        <div class="quick-action-icon green">
+
+                            <i class="fa-solid fa-bullseye"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Savings Goals
+                            </strong>
+
+                            <span>
+                                Track your goals
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right action-arrow"></i>
+
+                    </a>
+
+
+                    <a href="ai-coach.html"
+                       class="quick-action-card">
+
+                        <div class="quick-action-icon mint">
+
+                            <i class="fa-solid fa-robot"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Ask AI Coach
+                            </strong>
+
+                            <span>
+                                Get financial guidance
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right action-arrow"></i>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==========================================
+                 FOOTER
+            =========================================== -->
+
+            <footer class="page-footer">
+
+                <span>
+                    © 2026 FinPilot AI
+                </span>
+
+                <span>
+                    Smart Finance. Smarter Decisions.
+                </span>
+
+            </footer>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- ==========================================
+     LOGOUT
+=========================================== -->
+
+<script>
+
+function logoutUser() {
+
+    localStorage.removeItem("loggedInUser");
+
+    window.location.href = "login.html";
+
+}
+
+</script>
+
+
+<!-- Expense JavaScript -->
+
+<script src="../js/expense.js"></script>
+
+</body>
+
+</html>

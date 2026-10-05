@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AI Coach | FinPilot AI</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    >
+
+    <!-- AI Coach CSS -->
+    <link rel="stylesheet" href="../css/ai-coach.css">
+
+</head>
+
+
+<body>
+
+<div class="dashboard-layout">
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-brand">
+
+            <div class="brand-logo">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+
+            <div>
+                <h2>FinPilot AI</h2>
+                <span>Smart Finance</span>
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-navigation">
+
+            <div class="menu-label">
+                MAIN MENU
+            </div>
+
+
+            <a
+                href="dashboard.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+
+
+            <a
+                href="income.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-wallet"></i>
+                <span>Income</span>
+            </a>
+
+
+            <a
+                href="expense.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-receipt"></i>
+                <span>Expenses</span>
+            </a>
+
+
+            <a
+                href="budget.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-chart-pie"></i>
+                <span>Budget</span>
+            </a>
+
+
+            <a
+                href="goals.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-bullseye"></i>
+                <span>Goals</span>
+            </a>
+
+
+            <div class="menu-label tools-label">
+                TOOLS
+            </div>
+
+
+            <a
+                href="ai-coach.html"
+                class="nav-item active ai-nav-item"
+            >
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <span>AI Coach</span>
+                <span class="new-badge">AI</span>
+            </a>
+
+
+            <a
+                href="reports.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Reports</span>
+            </a>
+
+
+            <a
+                href="settings.html"
+                class="nav-item"
+            >
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+
+        <!-- Sidebar Help -->
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-help">
+
+                <div class="help-icon">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+
+                <div class="help-content">
+
+                    <strong>
+                        Smart money starts here
+                    </strong>
+
+                    <p>
+                        Let FinPilot AI help you understand and improve your finances.
+                    </p>
+
+                </div>
+
+                <a
+                    href="ai-coach.html"
+                    class="help-button"
+                >
+                    Explore AI Coach
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <button
+                class="logout-button"
+                id="logoutBtn"
+            >
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+        <!-- Top Header -->
+
+        <header class="top-header">
+
+            <div class="header-spacer"></div>
+
+            <div class="header-right">
+
+                <button
+                    class="notification-button"
+                    title="Notifications"
+                >
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="notification-dot"></span>
+                </button>
+
+
+                <div class="header-profile">
+
+                    <div
+                        class="profile-avatar"
+                        id="profileAvatar"
+                    >
+                        OM
+                    </div>
+
+                    <div class="profile-info">
+
+                        <strong id="profileName">
+                            Welcome
+                        </strong>
+
+                        <span>
+                            Personal Account
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down profile-chevron"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             PAGE CONTENT
+        ================================================== -->
+
+        <div class="page-content">
+
+
+            <!-- Page Heading -->
+
+            <section class="page-heading">
+
+                <div>
+
+                    <span class="page-eyebrow">
+                        AI FINANCIAL COACH
+                    </span>
+
+                    <h1>
+                        Your Personal AI Money Coach 🤖
+                    </h1>
+
+                    <p>
+                        Get personalized financial guidance based on your income,
+                        expenses, budgets, and savings goals.
+                    </p>
+
+                </div>
+
+
+                <div class="current-month">
+
+                    <i class="fa-regular fa-calendar"></i>
+
+                    <span id="currentMonth">
+                        September 2026
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 AI INSIGHT
+            ================================================== -->
+
+            <section class="ai-insight-card">
+
+                <div class="ai-insight-header">
+
+                    <div class="ai-insight-icon">
+
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span class="section-eyebrow">
+                            PERSONALIZED INSIGHT
+                        </span>
+
+                        <h2 id="aiTitle">
+                            Analyzing Your Finances
+                        </h2>
+
+                    </div>
+
+                    <span
+                        class="ai-status"
+                        id="aiStatus"
+                    >
+                        Analyzing
+                    </span>
+
+                </div>
+
+
+                <p
+                    class="ai-message"
+                    id="aiMessage"
+                >
+                    Analyzing your financial activity...
+                </p>
+
+
+                <div class="ai-recommendation">
+
+                    <div class="recommendation-icon">
+
+                        <i class="fa-solid fa-lightbulb"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Recommended Action
+                        </strong>
+
+                        <p id="aiRecommendation">
+                            Analyzing your financial activity...
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 FINANCIAL SUMMARY
+            ================================================== -->
+
+            <section class="dashboard-section">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-eyebrow">
+                            FINANCIAL SNAPSHOT
+                        </span>
+
+                        <h2>
+                            Financial Summary
+                        </h2>
+
+                        <p>
+                            A quick overview of your current financial position.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-grid">
+
+
+                    <div class="summary-card income-card">
+
+                        <div class="summary-card-top">
+
+                            <div class="summary-icon">
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+                            </div>
+
+                            <span class="summary-label">
+                                Total Income
+                            </span>
+
+                        </div>
+
+                        <h3 id="coachTotalIncome">
+                            ₹0
+                        </h3>
+
+                    </div>
+
+
+                    <div class="summary-card expense-card">
+
+                        <div class="summary-card-top">
+
+                            <div class="summary-icon">
+                                <i class="fa-solid fa-arrow-trend-down"></i>
+                            </div>
+
+                            <span class="summary-label">
+                                Total Expenses
+                            </span>
+
+                        </div>
+
+                        <h3 id="coachTotalExpenses">
+                            ₹0
+                        </h3>
+
+                    </div>
+
+
+                    <div class="summary-card balance-card">
+
+                        <div class="summary-card-top">
+
+                            <div class="summary-icon">
+                                <i class="fa-solid fa-wallet"></i>
+                            </div>
+
+                            <span class="summary-label">
+                                Current Balance
+                            </span>
+
+                        </div>
+
+                        <h3 id="coachBalance">
+                            ₹0
+                        </h3>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 BUDGET STATUS
+            ================================================== -->
+
+            <section class="dashboard-section">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-eyebrow">
+                            BUDGET MONITOR
+                        </span>
+
+                        <h2>
+                            Budget Status
+                        </h2>
+
+                        <p>
+                            A summary of your current budget performance.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-grid">
+
+
+                    <div class="summary-card">
+
+                        <div class="summary-card-top">
+
+                            <div class="summary-icon blue-icon">
+                                <i class="fa-solid fa-chart-pie"></i>
+                            </div>
+
+                            <span class="summary-label">
+                                Total Budgets
+                            </span>
+
+                        </div>
+
+                        <h3 id="coachTotalBudgets">
+                            0
+                        </h3>
+
+                    </div>
+
+
+                    <div class="summary-card warning-card">
+
+                        <div class="summary-card-top">
+
+                            <div class="summary-icon orange-icon">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            </div>
+
+                            <span class="summary-label">
+                                Over Budget
+                            </span>
+
+                        </div>
+
+                        <h3 id="coachOverBudget">
+                            0
+                        </h3>
+
+                    </div>
+
+
+                    <div class="summary-card">
+
+                        <div class="summary-card-top">
+
+                            <div class="summary-icon purple-icon">
+                                <i class="fa-solid fa-gauge-high"></i>
+                            </div>
+
+                            <span class="summary-label">
+                                Near Limit
+                            </span>
+
+                        </div>
+
+                        <h3 id="coachNearLimit">
+                            0
+                        </h3>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 SAVINGS GOALS
+            ================================================== -->
+
+            <section class="dashboard-section">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-eyebrow">
+                            SAVINGS PROGRESS
+                        </span>
+
+                        <h2>
+                            Savings Goal Progress
+                        </h2>
+
+                        <p>
+                            Your AI Coach also considers your current savings goals.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="coach-goals"
+                    id="coachGoals"
+                >
+
+                    <div class="loading-state">
+                        <i class="fa-solid fa-spinner fa-spin"></i>
+                        Loading savings goals...
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 SPENDING BREAKDOWN
+            ================================================== -->
+
+            <section class="dashboard-section">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-eyebrow">
+                            SPENDING ANALYSIS
+                        </span>
+
+                        <h2>
+                            Spending Breakdown
+                        </h2>
+
+                        <p>
+                            See where your money is being spent across categories.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="spending-breakdown"
+                    id="spendingBreakdown"
+                >
+
+                    <div class="loading-state">
+                        <i class="fa-solid fa-spinner fa-spin"></i>
+                        Loading spending breakdown...
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 MONTHLY SPENDING
+            ================================================== -->
+
+            <section class="dashboard-section">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-eyebrow">
+                            SPENDING TREND
+                        </span>
+
+                        <h2>
+                            Monthly Spending Trend
+                        </h2>
+
+                        <p>
+                            Review how your spending changes from month to month.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="monthly-spending"
+                    id="monthlySpending"
+                >
+
+                    <div class="loading-state">
+                        <i class="fa-solid fa-spinner fa-spin"></i>
+                        Loading monthly spending...
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="spending-trend-message"
+                    id="spendingTrendMessage"
+                >
+                    Analyzing your spending trend...
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 AI FINANCIAL ASSISTANT
+            ================================================== -->
+
+            <section class="dashboard-section ai-chat-section">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-eyebrow">
+                            AI ASSISTANT
+                        </span>
+
+                        <h2>
+                            Ask FinPilot AI
+                        </h2>
+
+                        <p>
+                            Ask questions about your personal finances and get guidance.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="ai-chat-card">
+
+
+                    <!-- Chat Messages -->
+
+                    <div
+                        class="ai-chat-messages"
+                        id="aiChatMessages"
+                    >
+
+                        <div class="ai-chat-message ai-message-bot">
+
+                            <div class="ai-chat-avatar">
+
+                                <i class="fa-solid fa-robot"></i>
+
+                            </div>
+
+
+                            <div class="ai-chat-bubble">
+
+                                <strong>
+                                    FinPilot AI
+                                </strong>
+
+                                <p>
+                                    Hello! I am your FinPilot financial assistant.
+                                    You can ask me about your income, expenses,
+                                    budgets, savings goals, or spending habits.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Chat Input -->
+
+                    <div class="ai-chat-input-area">
+
+                        <input
+                            type="text"
+                            id="aiChatInput"
+                            placeholder="Ask FinPilot AI anything about your finances..."
+                            autocomplete="off"
+                        >
+
+                        <button
+                            type="button"
+                            id="aiChatSend"
+                        >
+
+                            <i class="fa-solid fa-paper-plane"></i>
+
+                            Send
+
+                        </button>
+
+                    </div>
+
+
+                    <p class="ai-chat-hint">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        FinPilot AI provides guidance based on your current financial data.
+
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Footer -->
+
+            <footer class="page-footer">
+
+                <span>
+                    © 2026 FinPilot AI
+                </span>
+
+                <span>
+                    Smart Finance • AI Budget Coach
+                </span>
+
+            </footer>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script src="../js/ai-coach.js"></script>
+
+</body>
+
+</html>

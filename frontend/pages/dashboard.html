@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Dashboard | FinPilot AI</title>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Dashboard CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="dashboard-layout">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-brand">
+
+            <div class="brand-logo">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+
+            <div class="brand-text">
+
+                <h2>FinPilot AI</h2>
+
+                <span>Smart Finance</span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-navigation">
+
+
+            <span class="menu-label">
+                MAIN MENU
+            </span>
+
+
+            <a
+                href="dashboard.html"
+                class="nav-item active"
+            >
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <a
+                href="income.html"
+                class="nav-item"
+            >
+
+                <i class="fa-solid fa-wallet"></i>
+
+                <span>Income</span>
+
+            </a>
+
+
+            <a
+                href="expense.html"
+                class="nav-item"
+            >
+
+                <i class="fa-solid fa-credit-card"></i>
+
+                <span>Expenses</span>
+
+            </a>
+
+
+            <a
+                href="budget.html"
+                class="nav-item"
+            >
+
+                <i class="fa-solid fa-chart-pie"></i>
+
+                <span>Budget</span>
+
+            </a>
+
+
+            <a
+                href="goals.html"
+                class="nav-item"
+            >
+
+                <i class="fa-solid fa-bullseye"></i>
+
+                <span>Goals</span>
+
+            </a>
+
+
+            <span class="menu-label tools-label">
+                TOOLS
+            </span>
+
+
+            <a
+                href="ai-coach.html"
+                class="nav-item"
+            >
+
+                <i class="fa-solid fa-robot"></i>
+
+                <span>AI Coach</span>
+
+                <span class="new-badge">
+                    AI
+                </span>
+
+            </a>
+
+
+            <a
+                href="reports.html"
+                class="nav-item"
+            >
+
+                <i class="fa-solid fa-file-lines"></i>
+
+                <span>Reports</span>
+
+            </a>
+
+
+            <a
+                href="settings.html"
+                class="nav-item"
+            >
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>Settings</span>
+
+            </a>
+
+
+        </nav>
+
+
+        <!-- Sidebar Help -->
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-help">
+
+                <div class="help-icon">
+
+                    <i class="fa-solid fa-sparkles"></i>
+
+                </div>
+
+                <div class="help-content">
+
+                    <strong>
+                        Smart money starts here
+                    </strong>
+
+                    <p>
+                        Let FinPilot AI help you understand and improve your finances.
+                    </p>
+
+                    <a href="ai-coach.html">
+                        Explore AI Coach
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <button
+                id="logoutBtn"
+                class="nav-item logout-button"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Logout</span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOP HEADER
+        ================================================== -->
+
+        <header class="top-header">
+
+            <div class="header-spacer"></div>
+
+
+            <div class="header-right">
+
+
+                <button
+                    class="notification-button"
+                    aria-label="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <div class="header-profile">
+
+                    <div class="profile-avatar">
+                        OM
+                    </div>
+
+                    <div class="profile-details">
+
+                        <strong id="profileName">
+                            Om Mehare
+                        </strong>
+
+                        <span>
+                            Personal Account
+                        </span>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down profile-chevron"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             PAGE CONTENT
+        ================================================== -->
+
+        <div class="page-content">
+
+
+            <!-- =================================================
+                 PAGE HEADING
+            ================================================== -->
+
+            <section class="page-heading">
+
+                <div class="heading-text">
+
+                    <span class="heading-eyebrow">
+                        FINANCIAL OVERVIEW
+                    </span>
+
+                    <h1 id="greetingMessage">
+                        Good Evening, Om 👋
+                    </h1>
+
+                    <p id="financialMessage">
+                        Here's your financial overview. Stay on track and achieve your goals.
+                    </p>
+
+                </div>
+
+
+                <div class="date-selector">
+
+                    <i class="fa-regular fa-calendar"></i>
+
+                    <span id="currentMonth">
+                        September 2026
+                    </span>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 SUMMARY CARDS
+            ================================================== -->
+
+            <section class="summary-grid">
+
+
+                <!-- Income -->
+
+                <div class="summary-card income-card">
+
+                    <div class="summary-card-top">
+
+                        <div class="summary-icon">
+
+                            <i class="fa-solid fa-arrow-down"></i>
+
+                        </div>
+
+                        <span class="trend-pill positive">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                            Income
+                        </span>
+
+                    </div>
+
+
+                    <div class="summary-label">
+                        Total Income
+                    </div>
+
+                    <h2 id="totalIncome">
+                        ₹0
+                    </h2>
+
+                    <span class="summary-description">
+                        Total recorded income
+                    </span>
+
+                </div>
+
+
+
+                <!-- Expenses -->
+
+                <div class="summary-card expense-card">
+
+                    <div class="summary-card-top">
+
+                        <div class="summary-icon">
+
+                            <i class="fa-solid fa-arrow-up"></i>
+
+                        </div>
+
+                        <span class="trend-pill expense-trend">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                            Expenses
+                        </span>
+
+                    </div>
+
+
+                    <div class="summary-label">
+                        Total Expenses
+                    </div>
+
+                    <h2 id="totalExpenses">
+                        ₹0
+                    </h2>
+
+                    <span class="summary-description">
+                        Total recorded spending
+                    </span>
+
+                </div>
+
+
+
+                <!-- Balance -->
+
+                <div class="summary-card balance-card">
+
+                    <div class="summary-card-top">
+
+                        <div class="summary-icon">
+
+                            <i class="fa-solid fa-wallet"></i>
+
+                        </div>
+
+                        <span class="trend-pill positive">
+                            <i class="fa-solid fa-chart-line"></i>
+                            Balance
+                        </span>
+
+                    </div>
+
+
+                    <div class="summary-label">
+                        Available Balance
+                    </div>
+
+                    <h2 id="totalBalance">
+                        ₹0
+                    </h2>
+
+                    <span class="summary-description">
+                        Income minus expenses
+                    </span>
+
+                </div>
+
+
+
+                <!-- Savings Rate -->
+
+                <div class="summary-card savings-card">
+
+                    <div class="summary-card-top">
+
+                        <div class="summary-icon">
+
+                            <i class="fa-solid fa-piggy-bank"></i>
+
+                        </div>
+
+                        <span class="trend-pill positive">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                            Savings
+                        </span>
+
+                    </div>
+
+
+                    <div class="summary-label">
+                        Savings Rate
+                    </div>
+
+                    <h2 id="savingsRate">
+                        0%
+                    </h2>
+
+                    <span class="summary-description">
+                        Of total income
+                    </span>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ANALYTICS
+            ================================================== -->
+
+            <section class="analytics-grid">
+
+
+                <!-- Income vs Expenses -->
+
+                <div class="dashboard-card chart-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <span class="card-eyebrow">
+                                FINANCIAL ACTIVITY
+                            </span>
+
+                            <h3>
+                                Income vs Expenses
+                            </h3>
+
+                        </div>
+
+
+                        <div class="chart-period">
+                            Last 6 months
+                        </div>
+
+                    </div>
+
+
+                    <div class="chart-legend">
+
+                        <span>
+
+                            <span class="legend-dot income-dot"></span>
+
+                            Income
+
+                        </span>
+
+
+                        <span>
+
+                            <span class="legend-dot expense-dot"></span>
+
+                            Expenses
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="chart-container">
+
+                        <canvas id="expenseChart"></canvas>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Budget Distribution -->
+
+                <div class="dashboard-card budget-chart-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <span class="card-eyebrow">
+                                SPENDING BREAKDOWN
+                            </span>
+
+                            <h3>
+                                Budget Distribution
+                            </h3>
+
+                        </div>
+
+
+                        <div class="chart-period">
+                            This month
+                        </div>
+
+                    </div>
+
+
+                    <div class="budget-content">
+
+
+                        <div class="budget-doughnut">
+
+                            <canvas id="budgetChart"></canvas>
+
+                            <div class="budget-center">
+
+                                <strong id="budgetTotalSpent">
+                                    ₹0
+                                </strong>
+
+                                <span>
+                                    Total spent
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            id="budgetLegend"
+                            class="budget-legend"
+                        ></div>
+
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 INSIGHTS
+            ================================================== -->
+
+            <section class="insights-grid">
+
+
+                <!-- AI Insight -->
+
+                <div class="dashboard-card ai-insight-card">
+
+                    <div class="ai-card-header">
+
+                        <div class="ai-title">
+
+                            <div class="ai-icon">
+
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span class="card-eyebrow">
+                                    AI FINANCIAL INSIGHT
+                                </span>
+
+                                <h3>
+                                    Smart Recommendation
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <span class="ai-status">
+
+                            <span class="status-dot"></span>
+
+                            LIVE
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="ai-message">
+
+                        <p id="aiInsightMessage">
+                            Analyzing your financial activity...
+                        </p>
+
+                    </div>
+
+
+                    <div class="ai-card-footer">
+
+                        <span>
+                            <i class="fa-solid fa-robot"></i>
+                            Powered by FinPilot AI
+                        </span>
+
+                        <a href="ai-coach.html">
+                            View detailed insights
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Savings Goals -->
+
+                <div class="dashboard-card goals-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <span class="card-eyebrow">
+                                SAVINGS
+                            </span>
+
+                            <h3>
+                                Savings Goals
+                            </h3>
+
+                        </div>
+
+
+                        <a
+                            href="goals.html"
+                            class="view-all-link"
+                        >
+                            View All
+                        </a>
+
+                    </div>
+
+
+                    <div id="dashboardGoals">
+
+                        <p class="empty-state">
+                            Loading goals...
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Budget Alerts -->
+
+                <div class="dashboard-card alerts-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <span class="card-eyebrow">
+                                BUDGET STATUS
+                            </span>
+
+                            <h3>
+                                Budget Alerts
+                            </h3>
+
+                        </div>
+
+
+                        <a
+                            href="budget.html"
+                            class="view-all-link"
+                        >
+                            View All
+                        </a>
+
+                    </div>
+
+
+                    <ul id="budgetAlerts">
+
+                        <li>
+                            Loading budget status...
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 RECENT TRANSACTIONS
+            ================================================== -->
+
+            <section class="dashboard-card transactions-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span class="card-eyebrow">
+                            TRANSACTION HISTORY
+                        </span>
+
+                        <h3>
+                            Recent Transactions
+                        </h3>
+
+                    </div>
+
+
+                    <a
+                        href="expense.html"
+                        class="view-all-link"
+                    >
+                        View All
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <div class="transactions-table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Date
+                                </th>
+
+                                <th>
+                                    Name
+                                </th>
+
+                                <th>
+                                    Category
+                                </th>
+
+                                <th>
+                                    Amount
+                                </th>
+
+                                <th>
+                                    Type
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="transactionsBody">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 QUICK ACTIONS
+            ================================================== -->
+
+            <section class="quick-actions-section">
+
+                <div class="section-title">
+
+                    <div>
+
+                        <span class="card-eyebrow">
+                            QUICK ACCESS
+                        </span>
+
+                        <h3>
+                            Quick Actions
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="quick-actions-grid">
+
+
+                    <a
+                        href="income.html"
+                        class="quick-action-card"
+                    >
+
+                        <div class="quick-action-icon income-action">
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Add Income
+                            </strong>
+
+                            <span>
+                                Record new income
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right quick-arrow"></i>
+
+                    </a>
+
+
+
+                    <a
+                        href="expense.html"
+                        class="quick-action-card"
+                    >
+
+                        <div class="quick-action-icon expense-action">
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Add Expense
+                            </strong>
+
+                            <span>
+                                Record new spending
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right quick-arrow"></i>
+
+                    </a>
+
+
+
+                    <a
+                        href="budget.html"
+                        class="quick-action-card"
+                    >
+
+                        <div class="quick-action-icon budget-action">
+
+                            <i class="fa-solid fa-chart-pie"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Create Budget
+                            </strong>
+
+                            <span>
+                                Plan your spending
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right quick-arrow"></i>
+
+                    </a>
+
+
+
+                    <a
+                        href="ai-coach.html"
+                        class="quick-action-card"
+                    >
+
+                        <div class="quick-action-icon ai-action">
+
+                            <i class="fa-solid fa-robot"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Ask AI Coach
+                            </strong>
+
+                            <span>
+                                Get financial guidance
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right quick-arrow"></i>
+
+                    </a>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 FOOTER
+            ================================================== -->
+
+            <footer class="dashboard-footer">
+
+                <span>
+                    © 2026 FinPilot AI
+                </span>
+
+                <span>
+                    Smart Finance. Smarter Decisions.
+                </span>
+
+            </footer>
+
+
+        </div>
+
+    </main>
+
+</div>
+
+
+
+<!-- =========================================================
+     CHART.JS
+========================================================== -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"
+></script>
+
+
+<!-- =========================================================
+     DASHBOARD JAVASCRIPT
+========================================================== -->
+
+<script src="../js/dashboard.js"></script>
+
+
+</body>
+
+</html>

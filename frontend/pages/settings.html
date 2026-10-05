@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>FinPilot AI - Settings</title>
+
+
+    <!-- Google Font -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- Settings CSS -->
+
+    <link
+        rel="stylesheet"
+        href="../css/settings.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="dashboard-layout">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+
+        <!-- Brand -->
+
+        <div class="sidebar-brand">
+
+            <div class="brand-logo">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+            </div>
+
+
+            <div>
+
+                <div class="brand-name">
+                    FinPilot AI
+                </div>
+
+                <div class="brand-subtitle">
+                    Smart Finance
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav class="sidebar-navigation">
+
+
+            <div class="nav-section-label">
+                MAIN MENU
+            </div>
+
+
+            <a
+                class="nav-item"
+                href="dashboard.html"
+            >
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                class="nav-item"
+                href="income.html"
+            >
+
+                <i class="fa-solid fa-wallet"></i>
+
+                <span>
+                    Income
+                </span>
+
+            </a>
+
+
+            <a
+                class="nav-item"
+                href="expense.html"
+            >
+
+                <i class="fa-solid fa-receipt"></i>
+
+                <span>
+                    Expenses
+                </span>
+
+            </a>
+
+
+            <a
+                class="nav-item"
+                href="budget.html"
+            >
+
+                <i class="fa-solid fa-chart-pie"></i>
+
+                <span>
+                    Budget
+                </span>
+
+            </a>
+
+
+            <a
+                class="nav-item"
+                href="goals.html"
+            >
+
+                <i class="fa-solid fa-bullseye"></i>
+
+                <span>
+                    Goals
+                </span>
+
+            </a>
+
+
+            <div class="nav-section-label tools-label">
+                TOOLS
+            </div>
+
+
+            <a
+                class="nav-item"
+                href="ai-coach.html"
+            >
+
+                <i class="fa-solid fa-robot"></i>
+
+                <span>
+                    AI Coach
+                </span>
+
+                <span class="new-badge">
+                    AI
+                </span>
+
+            </a>
+
+
+            <a
+                class="nav-item"
+                href="reports.html"
+            >
+
+                <i class="fa-solid fa-file-lines"></i>
+
+                <span>
+                    Reports
+                </span>
+
+            </a>
+
+
+            <a
+                class="nav-item active"
+                href="settings.html"
+            >
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>
+                    Settings
+                </span>
+
+            </a>
+
+
+        </nav>
+
+
+        <!-- Sidebar Bottom -->
+
+        <div class="sidebar-bottom">
+
+
+            <div class="sidebar-help">
+
+                <div class="help-icon">
+
+                    <i class="fa-solid fa-sparkles"></i>
+
+                </div>
+
+
+                <strong>
+                    Smart money starts here
+                </strong>
+
+
+                <p>
+                    Let FinPilot AI help you understand
+                    and improve your finances.
+                </p>
+
+
+                <a
+                    href="ai-coach.html"
+                    class="help-button"
+                >
+                    Explore AI Coach
+                </a>
+
+            </div>
+
+
+            <button
+                class="nav-item logout-item"
+                id="logoutBtn"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>
+                    Logout
+                </span>
+
+            </button>
+
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- Top Header -->
+
+        <header class="top-header">
+
+
+            <div class="header-spacer"></div>
+
+
+            <div class="header-right">
+
+
+                <button
+                    class="notification-button"
+                    aria-label="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <div class="header-profile">
+
+
+                    <div
+                        class="profile-avatar"
+                        id="profileAvatar"
+                    >
+                        OM
+                    </div>
+
+
+                    <div class="profile-info">
+
+                        <strong id="profileName">
+                            Welcome
+                        </strong>
+
+                        <span>
+                            Personal Account
+                        </span>
+
+                    </div>
+
+
+                    <i class="fa-solid fa-chevron-down profile-chevron"></i>
+
+                </div>
+
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             PAGE CONTENT
+        ================================================== -->
+
+        <div class="page-content">
+
+
+            <!-- Page Heading -->
+
+            <section class="page-heading">
+
+
+                <div>
+
+                    <div class="page-eyebrow">
+                        ACCOUNT SETTINGS
+                    </div>
+
+
+                    <h1>
+                        Manage Your Account ⚙️
+                    </h1>
+
+
+                    <p>
+                        View your account information and manage
+                        your FinPilot AI session.
+                    </p>
+
+                </div>
+
+
+                <div class="page-date">
+
+                    <i class="fa-regular fa-calendar"></i>
+
+                    <span id="currentMonth">
+                        September 2026
+                    </span>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PROFILE CARD
+            ================================================== -->
+
+            <section class="profile-card">
+
+
+                <div class="profile-card-header">
+
+
+                    <div
+                        class="large-profile-avatar"
+                        id="settingsAvatar"
+                    >
+                        OM
+                    </div>
+
+
+                    <div>
+
+                        <div class="profile-eyebrow">
+                            FINPILOT AI ACCOUNT
+                        </div>
+
+
+                        <h2 id="settingsUserName">
+                            User
+                        </h2>
+
+
+                        <p>
+                            Your personal finance account information
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- Account Information -->
+
+                <div class="settings-info-grid">
+
+
+                    <div class="settings-info-item">
+
+
+                        <div class="info-icon blue-info">
+
+                            <i class="fa-solid fa-user"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Full Name
+                            </span>
+
+
+                            <strong id="settingsFullName">
+                                Loading...
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="settings-info-item">
+
+
+                        <div class="info-icon purple-info">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Email Address
+                            </span>
+
+
+                            <strong id="settingsEmail">
+                                Loading...
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="settings-info-item">
+
+
+                        <div class="info-icon green-info">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Account Status
+                            </span>
+
+
+                            <strong>
+                                Active
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ABOUT FINPILOT AI
+            ================================================== -->
+
+            <section class="settings-section">
+
+
+                <div class="section-header">
+
+
+                    <div>
+
+
+                        <span class="section-eyebrow">
+                            ABOUT THE APPLICATION
+                        </span>
+
+
+                        <h2>
+                            About FinPilot AI
+                        </h2>
+
+                    </div>
+
+
+                    <div class="section-icon blue-icon">
+
+                        <i class="fa-solid fa-circle-info"></i>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="about-content">
+
+
+                    <div class="about-icon">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <p>
+                            FinPilot AI is a smart personal finance
+                            management system designed to help users
+                            track income, manage expenses, monitor
+                            budgets, work toward savings goals, and
+                            receive AI-based financial insights.
+                        </p>
+
+
+                        <div class="feature-tags">
+
+                            <span>
+                                <i class="fa-solid fa-wallet"></i>
+                                Income Tracking
+                            </span>
+
+
+                            <span>
+                                <i class="fa-solid fa-receipt"></i>
+                                Expense Tracking
+                            </span>
+
+
+                            <span>
+                                <i class="fa-solid fa-chart-pie"></i>
+                                Budget Management
+                            </span>
+
+
+                            <span>
+                                <i class="fa-solid fa-robot"></i>
+                                AI Coach
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ACCOUNT ACTIONS
+            ================================================== -->
+
+            <section class="settings-section">
+
+
+                <div class="section-header">
+
+
+                    <div>
+
+
+                        <span class="section-eyebrow">
+                            SESSION MANAGEMENT
+                        </span>
+
+
+                        <h2>
+                            Account Actions
+                        </h2>
+
+                    </div>
+
+
+                    <div class="section-icon orange-icon">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                    </div>
+
+
+                </div>
+
+
+                <p class="section-description">
+                    Use the options below to return to your dashboard
+                    or securely end your current session.
+                </p>
+
+
+                <div class="settings-actions">
+
+
+                    <button
+                        class="settings-btn dashboard-btn"
+                        id="dashboardBtn"
+                    >
+
+                        <i class="fa-solid fa-house"></i>
+
+                        Back to Dashboard
+
+                    </button>
+
+
+                    <button
+                        class="settings-btn logout-btn"
+                        id="settingsLogoutBtn"
+                    >
+
+                        <i class="fa-solid fa-right-from-bracket"></i>
+
+                        Logout
+
+                    </button>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 SECURITY NOTE
+            ================================================== -->
+
+            <section class="security-card">
+
+
+                <div class="security-icon">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Your Session
+                    </h3>
+
+
+                    <p>
+                        Your current login session is stored locally
+                        in your browser. Logging out will remove the
+                        active session from this device.
+                    </p>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- Footer -->
+
+            <footer class="dashboard-footer">
+
+                <span>
+                    © 2026 FinPilot AI
+                </span>
+
+
+                <span>
+                    Smart Personal Finance & AI Budget Coach
+                </span>
+
+            </footer>
+
+
+        </div>
+
+    </main>
+
+</div>
+
+
+
+<script src="../js/settings.js"></script>
+
+</body>
+
+</html>

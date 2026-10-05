@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | FinPilot AI</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="login-card">
+
+            <div class="logo-section">
+                <h1>FinPilot AI</h1>
+                <p>Smart Personal Finance & AI Budget Coach</p>
+            </div>
+
+            <div class="welcome-section">
+                <h2>Create Account 🚀</h2>
+                <p>Join FinPilot AI and manage your finances smarter.</p>
+            </div>
+
+            <form id="registerForm">
+
+                <div class="input-group">
+                    <label for="fullname">Full Name</label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" id="fullname" placeholder="Enter your full name" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="password" placeholder="Create password" required>
+
+                        <button type="button" class="toggle-password">
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="confirmPassword" placeholder="Confirm password" required>
+                    </div>
+                </div>
+
+                <div class="options">
+
+                    <label class="remember">
+                        <input type="checkbox" id="terms">
+                        I agree to the Terms & Conditions
+                    </label>
+
+                </div>
+
+                <button type="submit" class="login-btn">
+                    Create Account
+                </button>
+
+            </form>
+
+            <div class="register-link">
+                <p>
+                    Already have an account?
+                    <a href="login.html">Login</a>
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="../js/register.js"></script>
+
+</body>
+
+</html>

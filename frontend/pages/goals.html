@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Goals | FinPilot AI</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    >
+
+    <!-- Goals CSS -->
+    <link rel="stylesheet" href="../css/goals.css">
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-brand">
+
+            <div class="brand-logo">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+
+            <div>
+                <h2>FinPilot AI</h2>
+                <span>Smart Finance</span>
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-navigation">
+
+            <div class="menu-label">
+                MAIN MENU
+            </div>
+
+            <a href="dashboard.html" class="nav-item">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="income.html" class="nav-item">
+                <i class="fa-solid fa-wallet"></i>
+                <span>Income</span>
+            </a>
+
+            <a href="expense.html" class="nav-item">
+                <i class="fa-solid fa-receipt"></i>
+                <span>Expenses</span>
+            </a>
+
+            <a href="budget.html" class="nav-item">
+                <i class="fa-solid fa-chart-pie"></i>
+                <span>Budget</span>
+            </a>
+
+            <a href="goals.html" class="nav-item active">
+                <i class="fa-solid fa-bullseye"></i>
+                <span>Goals</span>
+            </a>
+
+
+            <div class="menu-label tools-label">
+                TOOLS
+            </div>
+
+            <a href="ai-coach.html" class="nav-item ai-nav-item">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <span>AI Coach</span>
+                <span class="new-badge">AI</span>
+            </a>
+
+            <a href="reports.html" class="nav-item">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Reports</span>
+            </a>
+
+            <a href="settings.html" class="nav-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+
+        <!-- Sidebar Help -->
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-help">
+
+                <div class="help-icon">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+
+                <div class="help-content">
+                    <strong>Smart money starts here</strong>
+                    <p>
+                        Let FinPilot AI help you understand and improve your finances.
+                    </p>
+                </div>
+
+                <a href="ai-coach.html" class="help-button">
+                    Explore AI Coach
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <button class="logout-button" id="logoutBtn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+        <!-- Top Header -->
+
+        <header class="top-header">
+
+            <div class="header-spacer"></div>
+
+            <div class="header-right">
+
+                <button class="notification-button" title="Notifications">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="notification-dot"></span>
+                </button>
+
+                <div class="header-profile">
+
+                    <div class="profile-avatar" id="profileAvatar">
+                        OM
+                    </div>
+
+                    <div class="profile-info">
+                        <strong id="profileName">
+                            Welcome
+                        </strong>
+
+                        <span>
+                            Personal Account
+                        </span>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down profile-chevron"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- Page Content -->
+
+        <div class="page-content">
+
+            <!-- Page Heading -->
+
+            <section class="page-heading">
+
+                <div>
+
+                    <span class="page-eyebrow">
+                        SAVINGS GOALS
+                    </span>
+
+                    <h1>
+                        Build Your Financial Future 🎯
+                    </h1>
+
+                    <p>
+                        Set savings targets and track your progress toward the things that matter most.
+                    </p>
+
+                </div>
+
+                <div class="current-month">
+
+                    <i class="fa-regular fa-calendar"></i>
+
+                    <span id="currentMonth">
+                        September 2026
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 CREATE GOAL FORM
+            ================================================== -->
+
+            <section
+                class="goal-form-card"
+                id="goalForm"
+                style="display: none;"
+            >
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-eyebrow">
+                            NEW GOAL
+                        </span>
+
+                        <h2>
+                            Create Savings Goal
+                        </h2>
+
+                        <p>
+                            Define a target and start tracking your savings progress.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="goal-form-grid">
+
+                    <div class="form-group">
+
+                        <label for="goalName">
+                            Goal Name
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-bullseye"></i>
+
+                            <input
+                                type="text"
+                                id="goalName"
+                                placeholder="Example: Emergency Fund"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="targetAmount">
+                            Target Amount
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span class="currency-symbol">₹</span>
+
+                            <input
+                                type="number"
+                                id="targetAmount"
+                                placeholder="50000"
+                                min="1"
+                                step="0.01"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="savedAmount">
+                            Current Saved Amount
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span class="currency-symbol">₹</span>
+
+                            <input
+                                type="number"
+                                id="savedAmount"
+                                placeholder="10000"
+                                min="0"
+                                step="0.01"
+                                value="0"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="targetDate">
+                            Target Date
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-regular fa-calendar"></i>
+
+                            <input
+                                type="date"
+                                id="targetDate"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-actions">
+
+                    <button
+                        id="createGoalBtn"
+                        class="primary-button"
+                    >
+                        <i class="fa-solid fa-plus"></i>
+                        Create Goal
+                    </button>
+
+                    <button
+                        id="cancelGoalBtn"
+                        class="secondary-button"
+                    >
+                        Cancel
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 GOALS SECTION
+            ================================================== -->
+
+            <section class="goals-section">
+
+                <div class="section-heading goals-section-heading">
+
+                    <div>
+
+                        <span class="section-eyebrow">
+                            YOUR GOALS
+                        </span>
+
+                        <h2>
+                            Savings Goals
+                        </h2>
+
+                        <p>
+                            Monitor your targets and see how close you are to reaching them.
+                        </p>
+
+                    </div>
+
+                    <button
+                        id="showGoalFormBtn"
+                        class="create-goal-button"
+                    >
+                        <i class="fa-solid fa-plus"></i>
+                        Create New Goal
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="goals-container"
+                    id="goalsContainer"
+                >
+
+                    <div class="empty-goals">
+
+                        <div class="empty-goals-icon">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+
+                        <h3>
+                            Loading goals...
+                        </h3>
+
+                        <p>
+                            Your savings goals will appear here.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Footer -->
+
+            <footer class="page-footer">
+
+                <span>
+                    © 2026 FinPilot AI
+                </span>
+
+                <span>
+                    Smart Finance • AI Budget Coach
+                </span>
+
+            </footer>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script src="../js/goals.js"></script>
+
+</body>
+
+</html>
