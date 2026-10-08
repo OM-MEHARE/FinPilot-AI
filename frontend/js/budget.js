@@ -148,7 +148,7 @@ budgetForm.addEventListener(
 
             const response =
                 await fetch(
-                    "http://127.0.0.1:8001/budgets?user_id=" +
+                    "http://192.168.0.152:8001/budgets?user_id=" +
                     userData.user_id,
                     {
 
@@ -243,7 +243,7 @@ async function loadBudgets() {
 
         const response =
             await fetch(
-                "http://127.0.0.1:8001/budgets?user_id=" +
+                "http://192.168.0.152:8001/budgets?user_id=" +
                 userData.user_id
             );
 
@@ -519,7 +519,7 @@ async function editBudget(budgetId) {
 
         const response =
             await fetch(
-                "http://127.0.0.1:8001/budgets?user_id=" +
+                "http://192.168.0.152:8001/budgets?user_id=" +
                 userData.user_id
             );
 
@@ -644,7 +644,7 @@ async function updateBudget(
 
         const response =
             await fetch(
-                "http://127.0.0.1:8001/budgets/" +
+                "http://192.168.0.152:8001/budgets/" +
                 budgetId,
                 {
 
@@ -765,7 +765,7 @@ async function deleteBudget(budgetId) {
 
         const response =
             await fetch(
-                "http://127.0.0.1:8001/budgets/" +
+                "http://192.168.0.152:8001/budgets/" +
                 budgetId +
                 "?user_id=" +
                 userData.user_id,

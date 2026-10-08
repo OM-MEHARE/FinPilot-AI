@@ -1,8 +1,11 @@
 from fastapi import APIRouter, HTTPException
 from backend.models.user import UserRegister
 from backend.database import get_connection
+from pwdlib import PasswordHash
 
 router = APIRouter()
+
+password_hash = PasswordHash.recommended()
 
 
 @router.post("/register")
@@ -26,6 +29,9 @@ def register(user: UserRegister):
             detail="Email already registered."
         )
 
+    # Hash the password before storing it
+    hashed_password = password_hash.hash(user.password)
+
     # Insert new user
     cursor.execute(
         """
@@ -35,7 +41,7 @@ def register(user: UserRegister):
         (
             user.full_name,
             user.email,
-            user.password
+            hashed_password
         )
     )
 

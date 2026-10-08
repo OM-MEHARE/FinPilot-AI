@@ -139,7 +139,7 @@ async function loadGoals() {
     try {
 
         const response = await fetch(
-            "http://127.0.0.1:8001/goals?user_id=" +
+            "http://192.168.0.152:8001/goals?user_id=" +
             userData.user_id
         );
 
@@ -430,7 +430,7 @@ async function loadGoals() {
 
                         const response =
                             await fetch(
-                                "http://127.0.0.1:8001/goals/" +
+                                "http://192.168.0.152:8001/goals/" +
                                 goal.id,
                                 {
                                     method: "PUT",
@@ -539,7 +539,7 @@ async function loadGoals() {
 
                         const response =
                             await fetch(
-                                "http://127.0.0.1:8001/goals/" +
+                                "http://192.168.0.152:8001/goals/" +
                                 goal.id +
                                 "?user_id=" +
                                 userData.user_id,
@@ -740,7 +740,7 @@ if (createGoalBtn) {
 
                 const response =
                     await fetch(
-                        "http://127.0.0.1:8001/goals",
+                        "http://192.168.0.152:8001/goals",
                         {
                             method: "POST",
 

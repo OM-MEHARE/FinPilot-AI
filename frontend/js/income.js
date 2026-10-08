@@ -117,7 +117,7 @@ incomeForm.addEventListener(
 
             const response =
                 await fetch(
-                    "http://127.0.0.1:8001/income",
+                    "http://192.168.0.152:8001/income",
                     {
 
                         method: "POST",
@@ -201,7 +201,7 @@ async function loadIncome() {
 
         const response =
             await fetch(
-                "http://127.0.0.1:8001/income?user_id=" +
+                "http://192.168.0.152:8001/income?user_id=" +
                 userData.user_id
             );
 
@@ -360,7 +360,7 @@ async function editIncome(incomeId) {
 
         const response =
             await fetch(
-                "http://127.0.0.1:8001/income?user_id=" +
+                "http://192.168.0.152:8001/income?user_id=" +
                 userData.user_id
             );
 
@@ -472,7 +472,7 @@ async function updateIncome(
 
         const response =
             await fetch(
-                "http://127.0.0.1:8001/income/" +
+                "http://192.168.0.152:8001/income/" +
                 incomeId,
                 {
 
@@ -597,7 +597,7 @@ async function deleteIncome(incomeId) {
 
         const response =
             await fetch(
-                "http://127.0.0.1:8001/income/" +
+                "http://192.168.0.152:8001/income/" +
                 incomeId +
                 "?user_id=" +
                 userData.user_id,

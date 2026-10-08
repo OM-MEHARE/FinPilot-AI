@@ -186,7 +186,7 @@ expenseForm.addEventListener(
 
             const response =
                 await fetch(
-                    "http://127.0.0.1:8001/expenses",
+                    "http://192.168.0.152:8001/expenses",
                     {
 
                         method: "POST",
@@ -273,7 +273,7 @@ async function loadExpenses() {
 
         const response =
             await fetch(
-                "http://127.0.0.1:8001/expenses?user_id=" +
+                "http://192.168.0.152:8001/expenses?user_id=" +
                 userData.user_id
             );
 
@@ -475,7 +475,7 @@ async function editExpense(expenseId) {
 
         const response =
             await fetch(
-                "http://127.0.0.1:8001/expenses?user_id=" +
+                "http://192.168.0.152:8001/expenses?user_id=" +
                 userData.user_id
             );
 
@@ -619,7 +619,7 @@ async function updateExpense(
 
         const response =
             await fetch(
-                "http://127.0.0.1:8001/expenses/" +
+                "http://192.168.0.152:8001/expenses/" +
                 expenseId,
                 {
 
@@ -760,7 +760,7 @@ async function deleteExpense(expenseId) {
 
         const response =
             await fetch(
-                "http://127.0.0.1:8001/expenses/" +
+                "http://192.168.0.152:8001/expenses/" +
                 expenseId +
                 "?user_id=" +
                 userData.user_id,
