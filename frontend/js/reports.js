@@ -188,7 +188,7 @@ async function loadReports() {
 
         const dashboardResponse =
             await fetch(
-                "http://192.168.0.152:8001/dashboard?user_id=" +
+                "/dashboard?user_id=" +
                 userData.user_id
             );
 
@@ -566,7 +566,7 @@ async function displayGoals() {
 
         const response =
             await fetch(
-                "http://192.168.0.152:8001/goals?user_id=" +
+                "/goals?user_id=" +
                 userData.user_id
             );
 
@@ -770,7 +770,7 @@ async function loadReportBudgets() {
 
         const response =
             await fetch(
-                "http://192.168.0.152:8001/budgets?user_id=" +
+                "/budgets?user_id=" +
                 userData.user_id
             );
 

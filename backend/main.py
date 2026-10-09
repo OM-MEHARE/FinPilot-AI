@@ -5,6 +5,11 @@ from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
+from backend.database import create_tables
+
+# Ensure the database schema exists when the app starts.
+create_tables()
+
 from backend.api import (
     register,
     login,

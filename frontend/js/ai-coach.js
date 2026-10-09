@@ -119,7 +119,7 @@ async function loadAIInsight() {
 
         const response =
             await fetch(
-                "http://192.168.0.152:8001/ai-coach?user_id=" +
+                "/ai-coach?user_id=" +
                 userData.user_id
             );
 
@@ -228,7 +228,7 @@ async function loadCoachGoals() {
 
         const response =
             await fetch(
-                "http://192.168.0.152:8001/goals?user_id=" +
+                "/goals?user_id=" +
                 userData.user_id
             );
 
@@ -390,7 +390,7 @@ async function loadFinancialSummary() {
 
         const response =
             await fetch(
-                "http://192.168.0.152:8001/dashboard?user_id=" +
+                "/dashboard?user_id=" +
                 userData.user_id
             );
 
@@ -479,7 +479,7 @@ async function loadBudgetStatus() {
 
         const response =
             await fetch(
-                "http://192.168.0.152:8001/budgets?user_id=" +
+                "/budgets?user_id=" +
                 userData.user_id
             );
 
@@ -593,7 +593,7 @@ async function loadSpendingBreakdown() {
 
         const response =
             await fetch(
-                "http://192.168.0.152:8001/dashboard?user_id=" +
+                "/dashboard?user_id=" +
                 userData.user_id
             );
 
@@ -754,7 +754,7 @@ async function loadMonthlySpending() {
 
         const response =
             await fetch(
-                "http://192.168.0.152:8001/dashboard?user_id=" +
+                "/dashboard?user_id=" +
                 userData.user_id
             );
 
@@ -1185,7 +1185,7 @@ async function sendAIChatMessage() {
 
         const response =
             await fetch(
-                "http://192.168.0.152:8001/ai-chat",
+                "/ai-chat",
                 {
                     method: "POST",
 

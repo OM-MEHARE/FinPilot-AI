@@ -1,6 +1,10 @@
 import sqlite3
+from pathlib import Path
 
-DATABASE_NAME = "database/finpilot.db"
+BASE_DIR = Path(__file__).resolve().parent.parent
+DATABASE_DIR = BASE_DIR / "database"
+DATABASE_DIR.mkdir(parents=True, exist_ok=True)
+DATABASE_NAME = str(DATABASE_DIR / "finpilot.db")
 
 
 def get_connection():

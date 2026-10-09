@@ -411,7 +411,7 @@ async function loadDashboard() {
 
         const dashboardResponse =
             await fetch(
-                "http://192.168.0.152:8001/dashboard?user_id=" +
+                "/dashboard?user_id=" +
                 userData.user_id
             );
 
@@ -446,7 +446,7 @@ async function loadDashboard() {
 
             const incomeResponse =
                 await fetch(
-                    "http://192.168.0.152:8001/income?user_id=" +
+                    "/income?user_id=" +
                     userData.user_id
                 );
 
@@ -486,7 +486,7 @@ async function loadDashboard() {
 
             const expenseResponse =
                 await fetch(
-                    "http://192.168.0.152:8001/expenses?user_id=" +
+                    "/expenses?user_id=" +
                     userData.user_id
                 );
 
@@ -1968,7 +1968,7 @@ async function loadBudgetAlerts() {
 
         const response =
             await fetch(
-                "http://192.168.0.152:8001/budget-alerts?user_id=" +
+                "/budget-alerts?user_id=" +
                 userData.user_id
             );
 
@@ -2080,7 +2080,7 @@ async function loadAIInsight() {
 
         const response =
             await fetch(
-                "http://192.168.0.152:8001/ai-coach?user_id=" +
+                "/ai-coach?user_id=" +
                 userData.user_id
             );
 
@@ -2140,7 +2140,7 @@ async function loadDashboardGoals() {
 
         const goalsResponse =
             await fetch(
-                "http://192.168.0.152:8001/goals?user_id=" +
+                "/goals?user_id=" +
                 userData.user_id
             );
 

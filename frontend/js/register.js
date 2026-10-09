@@ -57,7 +57,7 @@ registerForm.addEventListener("submit", async function (event) {
 
         // Send Data to Backend
         const response = await fetch(
-            "http://192.168.0.152:8001/register",
+            "/register",
             {
                 method: "POST",
 
